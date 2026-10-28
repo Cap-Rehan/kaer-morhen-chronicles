@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Witcher: Chronicles Before the Wild Hunt</title>
+  <meta name="description" content="The complete story of The Witcher (2007) and The Witcher 2: Assassins of Kings, told as an illustrated chronicle for players about to begin The Witcher 3.">
+  <meta name="color-scheme" content="dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230B0D0C' stroke='%23B89A62' stroke-width='3'/%3E%3Cpath d='M32 50 26 43 22 44 20 37 16 33 18 28 16 16 24 22 32 20 40 22 48 16 46 28 48 33 44 37 42 44 38 43Z' fill='none' stroke='%23B89A62' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the chronicle</a>
+
+  <div class="progress" role="progressbar" aria-label="Chronicle read" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <div class="progress__bar"></div>
+  </div>
+
+  <header class="topbar" id="topbar">
+    <a class="topbar__brand" href="#top" aria-label="Back to the title page">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#medallion-small"/></svg>
+      <span>The Chronicles</span>
+    </a>
+    <p class="topbar__where" aria-live="polite"><span class="topbar__game"></span><span class="topbar__chapter"></span></p>
+    <p class="spoiler-tag" role="note"><span aria-hidden="true">◆</span> Spoilers<span class="spoiler-tag__long">: The Witcher 1 &amp; 2</span></p>
+    <div class="topbar__actions">
+      <button class="btn-icon" type="button" id="search-open" aria-haspopup="dialog" aria-controls="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+        <span class="btn-icon__label">Search</span><kbd>/</kbd>
+      </button>
+      <button class="btn-icon nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="toc">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <span class="btn-icon__label">Contents</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═════════════ OPENING ═════════════ -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__sky" aria-hidden="true"></div>
+    <svg class="hero__medallion" viewBox="0 0 200 200" aria-hidden="true"><use href="#medallion"/></svg>
+    <svg class="hero__land" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <path class="land-far" d="M0 220 L120 170 L210 200 L330 130 L420 180 L520 120 L640 175 L760 110 L880 165 L980 125 L1100 180 L1220 140 L1340 175 L1440 150 V320 H0Z"/>
+      <path class="land-mid" d="M0 260 L140 225 L260 245 L380 205 L470 235 L560 214 L600 220
+        L600 168 L612 168 L612 158 L620 158 L620 168 L640 168 L640 140 L650 128 L660 140 L660 186 L700 186 L700 150 L708 150 L708 142 L716 142 L716 150 L724 150 L724 186
+        L760 186 L760 120 L772 104 L784 120 L784 196 L812 196 L812 172 L826 172 L826 206 L860 214 L980 236 L1100 218 L1240 248 L1440 228 V320 H0Z"/>
+      <path class="land-near" d="M0 300 C200 270 360 300 520 284 C700 268 860 300 1040 286 C1220 274 1340 296 1440 290 V320 H0Z"/>
+    </svg>
+    <div class="hero__mist" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="eyebrow">A Chronicle of the Continent</p>
+      <h1 id="hero-title" class="hero__title">The Witcher</h1>
+      <p class="hero__subtitle">The Chronicles Before the Wild Hunt</p>
+      <div class="ornament" aria-hidden="true"><span></span><i>◆</i><span></span></div>
+      <p class="hero__lede">“Before the hunt for Ciri, before the Wild Hunt rode across the Continent, Geralt of Rivia had already lost his memories, crossed paths with kings, and become entangled in conspiracies that would reshape the Northern Kingdoms.”</p>
+
+      <div class="hero__volumes">
+        <a class="volume" href="#chronicle-1">
+          <span class="volume__num">I</span>
+          <span class="volume__title">The Witcher</span>
+          <span class="volume__meta">2007 · The Return of the White Wolf</span>
+        </a>
+        <a class="volume" href="#chronicle-2">
+          <span class="volume__num">II</span>
+          <span class="volume__title">The Witcher 2: Assassins of Kings</span>
+          <span class="volume__meta">2011 · A Continent Without Its Kings</span>
+        </a>
+      </div>
+
+      <p class="hero__warning"><span aria-hidden="true">◆</span> Spoilers for both games <span aria-hidden="true">◆</span></p>
+      <a class="btn-begin" href="#chronicle-1" id="begin">Begin the Chronicle</a>
+    </div>
+  </section>
+
+  <!-- ═════════════ BODY ═════════════ -->
+  <div class="layout">
+    <nav class="toc" id="toc" aria-label="Table of contents">
+      <div class="toc__head">
+        <p class="toc__title">Table of Contents</p>
+        <button class="btn-icon toc__close" type="button" id="nav-close" aria-label="Close contents">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <ol class="toc__list" id="toc-list"></ol>
+      <div class="toc__legend" aria-label="Legend">
+        <p class="toc__title">Legend</p>
+        <ul>
+          <li><i class="sw sw--main"></i>Main story</li>
+          <li><i class="sw sw--shared"></i>Both routes</li>
+          <li><i class="sw sw--iorveth"></i>Iorveth route</li>
+          <li><i class="sw sw--roche"></i>Roche route</li>
+          <li><i class="sw sw--choice"></i>Player choice</li>
+          <li><i class="sw sw--ending"></i>Ending / outcome</li>
+        </ul>
+      </div>
+    </nav>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <main id="main" class="content" tabindex="-1">
+      <noscript><p class="noscript">This chronicle needs JavaScript enabled to render its chapters.</p></noscript>
+      <div id="chronicle-root"></div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="ornament" aria-hidden="true"><span></span><i>◆</i><span></span></div>
+    <p>An unofficial fan chronicle. The Witcher is a trademark of CD PROJEKT; the world was created by Andrzej Sapkowski. All illustrations on this page are original, drawn in CSS and SVG.</p>
+    <p class="footer__note">Story details checked against the games' published plot summaries and walkthroughs. Where the games branch, the alternatives are shown; where something is only implied, it is marked.</p>
+  </footer>
+
+  <button class="to-top" type="button" id="to-top" aria-label="Return to top" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg>
+  </button>
+
+  <!-- ═════════════ SEARCH ═════════════ -->
+  <dialog class="search" id="search" aria-labelledby="search-title">
+    <form method="dialog" class="search__form" role="search" onsubmit="return false">
+      <h2 id="search-title" class="visually-hidden">Search the chronicle</h2>
+      <label class="visually-hidden" for="search-input">Search characters, places and events</label>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input id="search-input" type="search" autocomplete="off" placeholder="Search names, places, events…" aria-controls="search-results">
+      <button class="btn-icon" type="button" id="search-close" aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><kbd>Esc</kbd></button>
+    </form>
+    <p class="search__status" id="search-status" aria-live="polite"></p>
+    <ul class="search__results" id="search-results"></ul>
+  </dialog>
+
+  <!-- ═════════════ SVG SYMBOLS ═════════════ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="medallion" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="100" cy="100" r="86" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 5"/>
+        <path d="M100 166 L84 144 L70 148 L63 126 L50 112 L56 94 L46 46 L74 72 L100 66 L126 72 L154 46 L144 94 L150 112 L137 126 L130 148 L116 144 Z"
+              fill="rgba(11,13,12,.55)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M56 94 L74 72 M144 94 L126 72" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M72 104 L90 110 L76 114 Z M128 104 L110 110 L124 114 Z" fill="currentColor"/>
+        <path d="M100 66 L100 132 M90 134 L100 150 L110 134" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M86 140 L90 152 M114 140 L110 152" stroke="currentColor" stroke-width="1.6"/>
+      </symbol>
+      <symbol id="medallion-small" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <path d="M32 52 26 44 21 45 19 38 15 34 17 28 14 13 23 21 32 19 41 21 50 13 47 28 49 34 45 38 43 45 38 44Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M23 33l6 2-5 1zM41 33l-6 2 5 1z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

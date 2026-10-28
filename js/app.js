@@ -432,7 +432,7 @@
     const filters = D.factionFilters.map((f) => `<button type="button" class="chip" data-affil="${f.id}" aria-pressed="false">${esc(f.label)}</button>`).join("");
     const cards = D.characters.map((c) => `<article class="char reveal" id="char-${c.id}" data-games="${c.games.join(" ")}" data-affil="${c.affiliation.join(" ")}">
         <header class="char__head">
-          ${crest(c.id)}
+          ${c.img ? `<img class="crest crest--img" src="${esc(c.img)}" alt="${esc(c.name)}" loading="lazy">` : crest(c.id)}
           <div>
           <h3 class="char__name">${esc(c.name)}</h3>
           <p class="char__title"><em>${esc(c.title)}</em></p>
@@ -470,6 +470,50 @@
       </div>
       <div class="chars">${cards}</div>
     </section>`;
+  }
+
+  function renderItems() {
+    const list = D.items || [];
+    const tabs = list.map((i, n) => `<button type="button" class="kit__tab" role="tab" data-i="${n}" aria-selected="${n === 0}">
+        <span class="kit__tabname">${esc(i.name)}</span><span class="kit__tabsub">${esc(i.title)}</span></button>`).join("");
+    const stages = list.map((i, n) => `<div class="kit__panel" role="tabpanel" data-i="${n}"${n ? " hidden" : ""}>
+        <div class="kit__stage"><div class="kit__card"><img src="${esc(i.img)}" alt="${esc(i.name)}" loading="lazy"><span class="kit__glare"></span></div></div>
+        <h3 class="char__name">${esc(i.name)}</h3>
+        <p class="char__title"><em>${esc(i.title)}</em></p>
+        <p class="char__role">${esc(i.text)}</p>
+      </div>`).join("");
+    return `<section class="index-section" id="arms" aria-labelledby="arms-title" data-toc data-game="Index" data-chapter="Gear">
+      <header class="section-head reveal">
+        <p class="eyebrow">Geralt's companions &amp; kit</p>
+        <h2 class="section-title" id="arms-title">On the Path</h2>
+        <p class="section-lede">Two swords, a medallion and a horse. Pick one, then move over it to turn it.</p>
+      </header>
+      <div class="kit reveal"><div class="kit__tabs" role="tablist" aria-label="Geralt's kit">${tabs}</div><div class="kit__view">${stages}</div></div>
+    </section>`;
+  }
+
+  // Tabs plus a pointer-driven 3D tilt on the active card.
+  function initKit() {
+    const kit = $(".kit");
+    if (!kit) return;
+    const pick = (n) => {
+      $$(".kit__tab", kit).forEach((t) => t.setAttribute("aria-selected", String(t.dataset.i === String(n))));
+      $$(".kit__panel", kit).forEach((p) => (p.hidden = p.dataset.i !== String(n)));
+    };
+    kit.addEventListener("click", (e) => { const t = e.target.closest(".kit__tab"); if (t) pick(t.dataset.i); });
+    if (reduceMotion.matches) return;
+    kit.addEventListener("pointermove", (e) => {
+      const st = e.target.closest(".kit__stage");
+      if (!st) return;
+      const r = st.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      const c = $(".kit__card", st);
+      c.style.transform = `rotateY(${(x - 0.5) * 28}deg) rotateX(${(0.5 - y) * 20}deg) scale(1.03)`;
+      c.style.setProperty("--gx", x * 100 + "%"); c.style.setProperty("--gy", y * 100 + "%");
+    });
+    kit.addEventListener("pointerout", (e) => {
+      const st = e.target.closest(".kit__stage");
+      if (st && !st.contains(e.relatedTarget)) $(".kit__card", st).style.transform = "";
+    });
   }
 
   function renderFactions() {
@@ -539,7 +583,7 @@
       </li>`);
     });
     items.push(`<li class="toc__group"><a href="#characters" class="toc__chron"><span class="toc__num">✦</span><span>Index</span></a>
-      <ol><li><a href="#characters">Characters</a></li><li><a href="#factions">Factions</a></li></ol></li>`);
+      <ol><li><a href="#characters">Characters</a></li><li><a href="#arms">On the Path</a></li><li><a href="#factions">Factions</a></li></ol></li>`);
     items.push(`<li class="toc__group"><a href="#world" class="toc__chron"><span class="toc__num">✦</span><span>Afterword</span></a>
       <ol><li><a href="#world">The World Geralt Leaves Behind</a></li><li><a href="#before">Before You Begin the Wild Hunt</a></li></ol></li>`);
     $("#toc-list").innerHTML = items.join("");
@@ -548,8 +592,9 @@
 
   /* ─────────────── mount ─────────────── */
 
-  root.innerHTML = D.chronicles.map(renderChronicle).join("") + renderCharacters() + renderFactions() + renderAftermath();
+  root.innerHTML = D.chronicles.map(renderChronicle).join("") + renderCharacters() + renderItems() + renderFactions() + renderAftermath();
   renderTOC();
+  initKit();
   $(".hero").insertAdjacentHTML("beforeend", particles("embers", 22));
 
   /* ─────────────── reading depth ─────────────── */

@@ -994,7 +994,7 @@ window.CHRONICLE = {
      ════════════════════════════════════════════════════════════ */
   characters: [
     {
-      id: "geralt", name: "Geralt of Rivia", title: "The White Wolf",
+      id: "geralt", img: "img/geralt.webp", name: "Geralt of Rivia", title: "The White Wolf",
       affiliation: ["witchers"], games: ["w1", "w2"],
       role: "A witcher, a mutated monster-hunter, who returns from apparent death with amnesia and is pulled into the politics of the North.",
       relations: "Old friend and lover of Triss; Vesemir's pupil; friend of Dandelion and Zoltan; Yennefer's lost love.",
@@ -1003,7 +1003,7 @@ window.CHRONICLE = {
       endW2: "Remembers Yennefer and his years with the Wild Hunt; heads south to find her."
     },
     {
-      id: "triss", name: "Triss Merigold", title: "Sorceress of Maribor",
+      id: "triss", img: "img/triss.webp", name: "Triss Merigold", title: "Sorceress of Maribor",
       affiliation: ["mages", "temeria"], games: ["w1", "w2"],
       role: "Sorceress and Geralt's closest ally in both games, adviser to Temeria.",
       relations: "Geralt's lover (W2; a possible romance in W1). Friend of Yennefer in the novels.",
@@ -1012,7 +1012,7 @@ window.CHRONICLE = {
       endW2: "Rescued at Loc Muinne or freed later; leaves with Geralt."
     },
     {
-      id: "vesemir", name: "Vesemir", title: "Master of Kaer Morhen",
+      id: "vesemir", img: "img/vesemir.webp", name: "Vesemir", title: "Master of Kaer Morhen",
       affiliation: ["witchers"], games: ["w1"],
       role: "The oldest witcher of the School of the Wolf and Geralt's mentor.",
       relations: "Father figure to Geralt, Eskel and Lambert.",
@@ -1021,7 +1021,7 @@ window.CHRONICLE = {
       endW2: "Does not appear."
     },
     {
-      id: "foltest", name: "King Foltest", title: "King of Temeria",
+      id: "foltest", img: "img/foltest.webp", name: "King Foltest", title: "King of Temeria",
       affiliation: ["temeria"], games: ["w1", "w2"],
       role: "The powerful, proud king of Temeria, the strongest Northern kingdom.",
       relations: "Father of Adda and of Anaïs and Boussy; Geralt's employer.",
@@ -1030,7 +1030,7 @@ window.CHRONICLE = {
       endW2: "Dead; Temeria is left without a king."
     },
     {
-      id: "roche", name: "Vernon Roche", title: "Commander of the Blue Stripes",
+      id: "roche", img: "img/roche.webp", name: "Vernon Roche", title: "Commander of the Blue Stripes",
       affiliation: ["temeria"], games: ["w2"],
       role: "Head of Temeria's special forces, utterly loyal to Foltest and to Temeria.",
       relations: "Sworn enemy of Iorveth; uneasy ally of Geralt.",
@@ -1039,7 +1039,7 @@ window.CHRONICLE = {
       endW2: "Survives; leaves with Geralt if his route was chosen."
     },
     {
-      id: "iorveth", name: "Iorveth", title: "Scoia'tael commander",
+      id: "iorveth", img: "img/iorveth.webp", name: "Iorveth", title: "Scoia'tael commander",
       affiliation: ["scoiatael"], games: ["w2"],
       role: "A one-eyed elven guerrilla leader fighting human rule in the Pontar valley.",
       relations: "Roche's sworn enemy; ally of Saskia; once trusted Letho.",
@@ -1048,7 +1048,7 @@ window.CHRONICLE = {
       endW2: "Survives; leaves with Geralt if his route was chosen."
     },
     {
-      id: "letho", name: "Letho of Gulet", title: "The Kingslayer",
+      id: "letho", img: "img/letho.webp", name: "Letho of Gulet", title: "The Kingslayer",
       affiliation: ["vipers", "nilfgaard"], games: ["w2"],
       role: "A witcher of the School of the Viper who murders Demavend and Foltest.",
       relations: "Owes Geralt his life; took Yennefer into his care; used by the Lodge, employed by Emhyr.",
@@ -1057,7 +1057,7 @@ window.CHRONICLE = {
       endW2: "Spared or killed by Geralt (player choice)."
     },
     {
-      id: "henselt", name: "King Henselt", title: "King of Kaedwen",
+      id: "henselt", img: "img/henselt.webp", name: "King Henselt", title: "King of Kaedwen",
       affiliation: ["kaedwen"], games: ["w2"],
       role: "A ruthless king who tries to annex Upper Aedirn after Demavend's murder.",
       relations: "Enemy of Saskia and Vergen; executes Roche's Blue Stripes.",
@@ -1066,7 +1066,7 @@ window.CHRONICLE = {
       endW2: "Alive, unless killed by Roche on his route."
     },
     {
-      id: "saskia", name: "Saskia", title: "The Dragonslayer / Saesenthessis",
+      id: "saskia", img: "img/saskia.webp", name: "Saskia", title: "The Dragonslayer / Saesenthessis",
       affiliation: ["aedirn", "lodge"], games: ["w2"],
       role: "Leader of the Vergen rebellion. Secretly a dragon in human form, controlled by Philippa.",
       relations: "Iorveth's ally; Philippa's puppet.",
@@ -1075,7 +1075,7 @@ window.CHRONICLE = {
       endW2: "Killed, spared, or freed from Philippa's spell."
     },
     {
-      id: "philippa", name: "Philippa Eilhart", title: "Sorceress, Lodge leader",
+      id: "philippa", img: "img/philippa.webp", name: "Philippa Eilhart", title: "Sorceress, Lodge leader",
       affiliation: ["lodge", "mages"], games: ["w2"],
       role: "The most politically powerful sorceress in the North and a leader of the Lodge.",
       relations: "Controls Saskia; works with Síle and Dethmold.",
@@ -1084,7 +1084,7 @@ window.CHRONICLE = {
       endW2: "Survives; exposed and discredited."
     },
     {
-      id: "dandelion", name: "Dandelion", title: "Bard and chronicler",
+      id: "dandelion", img: "img/dandelion.webp", name: "Dandelion", title: "Bard and chronicler",
       affiliation: ["friends"], games: ["w1", "w2"],
       role: "Geralt's oldest friend, a poet and incurable womaniser. He narrates The Witcher 2's journal.",
       relations: "Geralt's companion; Zoltan's drinking partner.",
@@ -1093,7 +1093,7 @@ window.CHRONICLE = {
       endW2: "Alive."
     },
     {
-      id: "zoltan", name: "Zoltan Chivay", title: "Dwarven warrior",
+      id: "zoltan", img: "img/zoltan.webp", name: "Zoltan Chivay", title: "Dwarven warrior",
       affiliation: ["friends"], games: ["w1", "w2"],
       role: "A loyal, hard-drinking dwarf and old friend of Geralt's.",
       relations: "Geralt's friend; Dandelion's companion.",
@@ -1102,7 +1102,7 @@ window.CHRONICLE = {
       endW2: "Alive."
     },
     {
-      id: "jacques", name: "Jacques de Aldersberg", title: "Grand Master of the Order",
+      id: "jacques", img: "img/jacques.webp", name: "Jacques de Aldersberg", title: "Grand Master of the Order",
       affiliation: ["order", "salamandra"], games: ["w1"],
       role: "Leader of the Order of the Flaming Rose and secret patron of Salamandra.",
       relations: "Azar Javed's master. Implied to be Alvin, grown up after travelling back in time.",
@@ -1111,7 +1111,7 @@ window.CHRONICLE = {
       endW2: "—"
     },
     {
-      id: "azar", name: "Azar Javed", title: "Renegade mage",
+      id: "azar", img: "img/azar.webp", name: "Azar Javed", title: "Renegade mage",
       affiliation: ["salamandra"], games: ["w1"],
       role: "A mage and Salamandra's field leader.",
       relations: "Answers to Jacques; works with the Professor.",
@@ -1129,7 +1129,7 @@ window.CHRONICLE = {
       endW2: "—"
     },
     {
-      id: "alvin", name: "Alvin", title: "The Source",
+      id: "alvin", img: "img/alvin.webp", name: "Alvin", title: "The Source",
       affiliation: ["mages"], games: ["w1"],
       role: "A boy with uncontrolled magical power and visions of the White Frost.",
       relations: "Raised by Triss or Shani (player choice); implied to become Jacques.",
@@ -1138,7 +1138,7 @@ window.CHRONICLE = {
       endW2: "—"
     },
     {
-      id: "yennefer", name: "Yennefer of Vengerberg", title: "Sorceress",
+      id: "yennefer", img: "img/yennefer.webp", name: "Yennefer of Vengerberg", title: "Sorceress",
       affiliation: ["mages"], games: ["w2"],
       role: "The love of Geralt's life in the novels. Absent from both games, but central to Geralt's lost past.",
       relations: "Geralt's beloved; adoptive mother to Ciri in the novels.",
@@ -1151,6 +1151,18 @@ window.CHRONICLE = {
   /* ════════════════════════════════════════════════════════════
      FACTIONS
      ════════════════════════════════════════════════════════════ */
+  /* Geralt's companions & kit, shown in the interactive stage. Characters take the same optional `img` field. */
+  items: [
+    { id: "silver-sword", name: "Silver Sword", title: "For monsters", img: "img/silver-sword.jpg",
+      text: "Silver-edged and tempered for monsters: wraiths, vampires, werewolves and other creatures of magical origin. Geralt carries it on his back, over the steel." },
+    { id: "steel-sword", name: "Steel Sword", title: "For men and beasts", img: "img/steel-sword.jpg",
+      text: "The witcher's steel blade, used against humans, elves, dwarves and ordinary animals. Silver does little against them; steel does the job." },
+    { id: "medallion", name: "Wolf Medallion", title: "School of the Wolf", img: "img/medallion.png",
+      text: "A wolf's head medallion worn by Geralt. It vibrates near magic and marks him as a witcher of the Wolf School." },
+    { id: "roach", name: "Roach", title: "Geralt's horse", img: "img/roach.webp",
+      text: "Geralt's loyal chestnut mare, and the name he gives every horse he rides. In the novels she is a constant companion on the Path." }
+  ],
+
   factionFilters: [
     { id: "witchers", label: "Witchers", match: ["witchers", "vipers"] },
     { id: "temeria", label: "Temeria", match: ["temeria"] },

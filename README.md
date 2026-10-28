@@ -23,3 +23,7 @@ All story text lives in `js/data.js`; `js/app.js` only renders it.
 ## Disclaimer
 
 Unofficial fan project. *The Witcher* is the property of CD PROJEKT S.A. and Andrzej Sapkowski. Not affiliated with or endorsed by them.
+
+## License
+
+Code is MIT licensed, see [LICENSE](LICENSE). This does not cover the Witcher names, setting and story, which belong to their owners.
